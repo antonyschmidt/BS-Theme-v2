@@ -524,6 +524,12 @@ blockquote {
   margin-left: 6px;
 }
 
+@media screen and (min-width: 750px) {
+  .caption {
+    margin-left: 10px;
+  }
+}
+
 .caption-with-letter-spacing {
   font-size: 1rem;
   letter-spacing: 0.13rem;
@@ -1415,10 +1421,20 @@ button.shopify-payment-button__button--unbranded {
 .button-label,
 .shopify-challenge__button,
 .customer button {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   border-radius: 3px;
   line-height: 22px;
+}
+
+@media screen and (min-width: 750px) {
+
+  .button,
+  .button-label,
+  .shopify-challenge__button,
+  .customer button {
+    font-size: 18px;
+  }
 }
 
 .button--tertiary {

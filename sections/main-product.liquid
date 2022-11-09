@@ -71,10 +71,11 @@
       {% render 'product-media-gallery', variant_images: variant_images %}
     </div>
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
-      <div
+        <div
         id="ProductInfo-{{ section.id }}"
         class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}"
       >
+        <div class="inside-product-info-wrapper">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
         {%- for block in section.blocks -%}
@@ -392,9 +393,10 @@
                   </div>
                 </div>
               </noscript>
+              </div>
             {%- when 'buy_buttons' -%}
               <div {{ block.shopify_attributes }}>
-                <product-form class="product-form">
+                                <product-form class="product-form">
                   <div class="product-form__error-message-wrapper" role="alert" hidden>
                     <svg
                       aria-hidden="true"
