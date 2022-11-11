@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/antonyschmidt/BS-Theme-Copy/issues"
   },
-  "homepage": "https://github.com/antonyschmidt/BS-Theme-Copy#readme"
+  "homepage": "https://github.com/antonyschmidt/BS-Theme-Copy#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
 }
