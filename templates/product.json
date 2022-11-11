@@ -75,7 +75,7 @@
         "padding_bottom": 44
       }
     },
-    "75ee0f4f-fe2d-43b9-9b51-a452347517f5": {
+    "90af59b2-4285-48d5-9169-12c0f738d381": {
       "type": "features",
       "settings": {
         "features-header": "100% Qualität",
@@ -102,7 +102,7 @@
   },
   "order": [
     "main",
-    "75ee0f4f-fe2d-43b9-9b51-a452347517f5",
+    "90af59b2-4285-48d5-9169-12c0f738d381",
     "product-recommendations"
   ]
 }
