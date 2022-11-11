@@ -75,6 +75,13 @@
         "padding_bottom": 44
       }
     },
+    "75ee0f4f-fe2d-43b9-9b51-a452347517f5": {
+      "type": "features",
+      "settings": {
+        "features-header": "100% Qualität",
+        "features-description": "Dank weichem Silikon"
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -95,6 +102,7 @@
   },
   "order": [
     "main",
+    "75ee0f4f-fe2d-43b9-9b51-a452347517f5",
     "product-recommendations"
   ]
 }
