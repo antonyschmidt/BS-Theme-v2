@@ -1,5 +1,5 @@
 .image__block-wrapper {
-    display: flex;
+    display: none;
 }
 
 .carousel-wrapper {
@@ -12,6 +12,15 @@
     max-width: 480px;
     max-height: 480px;
 }
+
+@media screen and (max-width: 750px) {
+    .carousel-inner {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+/* buttons */
 
 .button__wrapper {
     display: flex;
@@ -52,6 +61,60 @@
 
 .button__wrapper button span i: {
     color: black;
+}
+
+@media screen and (max-width: 750px) {
+    .button__wrapper {
+        display: none;
+    }
+}
+
+/* indicators */
+
+.carousel-indicators {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
+.carousel-indicators [data-bs-target] {
+    box-sizing: border-box;
+    flex: 0;
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-left: 5px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #F8F8F8;
+    background-clip: border-box;
+    border-top: none;
+    border-bottom: none;
+    opacity: 1;
+    transition: opacity .6s ease;
+}
+
+.carousel-indicators .active {
+    background-image: linear-gradient(#E5E5E5, #00000029);
+}
+
+@media screen and (min-width: 750px) {
+    .carousel-indicators {
+        display: none;
+    }
 }
 
 /* thumbnail-gallery */
@@ -98,4 +161,16 @@
     width: 100px;
     height: 100px;
     border-radius: 3px;
+}
+
+/* flickity- / bootstrap-slider toogle */
+
+@media screen and (min-width: 750px) {
+    .image__block-wrapper {
+        display: flex;
+    }
+
+    .flickity-wrapper {
+        display: none;
+    }
 }

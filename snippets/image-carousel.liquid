@@ -1,6 +1,12 @@
 {{ 'image-carousel.css' | asset_url | stylesheet_tag }}
+{{ 'flickity.css' | asset_url | stylesheet_tag }}
+
+{%- comment -%}
+  bootstrap slider
+{%- endcomment -%}
 
 {% assign count = 0 %}
+{% assign indicatorCount = 0 %}
 
 <div class="image__block-wrapper">
   <div class="thumbnail__gallery-wrapper">
@@ -8,15 +14,14 @@
       {%- for image in product.images -%}
 
         <div class="thumbnail-item">
-          <img src="{{ image.src | img_url: '900x900' }}"/>
+          <img src="{{ image.src | img_url: '900x900' }}">
         </div>
       {%- endfor -%}
 
     </div>
   </div>
-  <div id="carouselExampleControls" class="carousel slide carousel-wrapper" data-bs-wrap="false">
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-wrap="false">
     <div class="carousel-inner">
-
       {%- for image in product.images -%}
 
         {% if count == 0 %}
@@ -29,19 +34,35 @@
           <img class="d-block w-100" data-bs-ride="carousel" src="{{ image.src | img_url: '900x900' }}">
         </div>
 
-        {% assign count = count | plus:1 %}
+        {% assign count = count | plus: 1 %}
 
       {%- endfor -%}
 
     </div>
+    <div class="carousel-indicators">
+      {%- for image in product.images -%}
+
+        {% if indicatorCount == 0 %}
+          {%- assign indicatorClass = "active" -%}
+          {%- assign aria = true -%}
+        {% else %}
+          {%- assign indicatorClass = "" -%}
+          {%- assign aria = false -%}
+        {% endif %}
+
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{indicatorCount}}" class="{{indicatorClass}}" aria-current="{{aria}}" aria-label="Slide {{indicatorCount}}"></button>
+
+        {% assign indicatorCount = indicatorCount | plus: 1 %}
+      {%- endfor -%}
+    </div>
     <div class="button__wrapper">
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true">
           <i class="fa-solid fa-angle-left"></i>
         </span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true">
           <i class="fa-solid fa-angle-right"></i>
         </span>
@@ -51,6 +72,15 @@
   </div>
 </div>
 
-<script>
-  $('.carousel').carousel({interval: 5000, wrap: false});
-</script>
+{%- comment -%}
+  flickity slider
+{%- endcomment -%}
+
+<div class="flickity-wrapper">
+  <div class="main-carousel" data-flickity='{ "wrapAround": true }'>
+    {%- for image in product.images -%}
+           <div class="carousel-cell">
+            <img src="{{ image.src | img_url: '900x900' }}">
+           </div>
+    {%- endfor -%}
+</div>

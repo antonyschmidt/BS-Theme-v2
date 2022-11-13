@@ -15,8 +15,16 @@
 
   {%- style -%}
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-top: 2.5vw;
+      padding-bottom: 2.5vw;
     }
+
+@media screen and (max-width: 750px){
+  .section-{{ section.id }}-padding {
+      padding-left:0;
+      padding-right:0;
+    }
+}
 
     @media screen and (min-width: 1250px){
       .section-{{section.id}}-padding {
@@ -27,7 +35,8 @@
          
     @media screen and (min-width: 750px) {
       .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
+        padding-top: 43px;
+        padding-bottom: 43px;
       }
 
       .section-{{section.id}}-layout {
