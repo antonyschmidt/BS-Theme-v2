@@ -77,7 +77,18 @@
 {%- endcomment -%}
 
 <div class="flickity-wrapper">
-  <div class="main-carousel" data-flickity='{ "wrapAround": true }'>
+  <div class="thumbnail__gallery-wrapper">
+    <div class="thumbnail__inside-wrapper">
+      {%- for image in product.images -%}
+
+        <div class="thumbnail-item">
+          <img src="{{ image.src | img_url: '900x900' }}">
+        </div>
+      {%- endfor -%}
+
+    </div>
+  </div>
+  <div class="main-carousel" data-flickity='{ "wrapAround": false }'>
     {%- for image in product.images -%}
            <div class="carousel-cell">
             <img src="{{ image.src | img_url: '900x900' }}">

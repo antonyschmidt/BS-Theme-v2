@@ -1036,6 +1036,7 @@ summary::-webkit-details-marker {
   .grid {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
     column-gap: var(--grid-desktop-horizontal-spacing);
     row-gap: var(--grid-desktop-vertical-spacing);
   }

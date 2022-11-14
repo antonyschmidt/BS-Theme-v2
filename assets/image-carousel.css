@@ -167,10 +167,6 @@
 
 @media screen and (min-width: 750px) {
     .image__block-wrapper {
-        display: flex;
-    }
-
-    .flickity-wrapper {
         display: none;
     }
 }
