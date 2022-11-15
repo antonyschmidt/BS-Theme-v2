@@ -1,9 +1,9 @@
 /* external css: flickity.css */
 
 .carousel-cell {
-    height: calc(88vw * 1);
-    width: 88vw;
-    margin-right: 2vw;
+    height: 89.66vw;
+    width: 89.66vw;
+    margin-right: 1.8vw;
     border-radius: 5px;
     counter-increment: carousel-cell;
     display: flex;

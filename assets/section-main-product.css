@@ -359,6 +359,7 @@ a.product__text {
 
 .product__title h1 {
   font-size: 22px;
+  height: 27px;
 }
 
 .product__title>* {
@@ -386,16 +387,19 @@ a.product__text {
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
+  height: 19px;
 }
 
 .product-price-wrapper {
   margin-bottom: 21px;
   display: flex;
+  height: 19px;
 }
 
 @media screen and (min-width: 750px) {
   .product-price-wrapper {
     margin-bottom: 18px;
+    height: 22px;
   }
 
   .product-type-wrapper {
@@ -408,10 +412,12 @@ a.product__text {
 
   .product__title h1 {
     font-size: 25px;
+    height: 30px;
   }
 
   .product-type-wrapper p {
     font-size: 18px;
+    height: 22px;
   }
 }
 

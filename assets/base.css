@@ -522,11 +522,14 @@ blockquote {
   align-self: flex-end;
   line-height: 13px;
   margin-left: 6px;
+  top: 2px;
+  position: relative;
 }
 
 @media screen and (min-width: 750px) {
   .caption {
     margin-left: 10px;
+    top: 0;
   }
 }
 
